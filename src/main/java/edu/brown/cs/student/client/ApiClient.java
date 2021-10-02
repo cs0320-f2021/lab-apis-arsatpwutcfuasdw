@@ -17,7 +17,8 @@ public class ApiClient {
   public ApiClient() {
     // TODO build an HttpClient with version HTTP_2 and connection timeout of 60 seconds.
     // See https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpClient.html
-    this.client = null;
+    HttpClient client = HttpClient.newHttpClient();
+    this.client = client;
   }
 
   public void makeRequest(HttpRequest req) {
